@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Пересдача DevSecOps · ITHUB</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="gate">
+  <div class="gate-card">
+    <div class="kicker">ITHUB · DevSecOps · Пересдача</div>
+    <h1>Практикум пересдачи по DevSecOps</h1>
+    <p>Выберите дисциплину и свою фамилию. У каждого студента своя предметная область и свои числа в заданиях, поэтому ответы соседа не подойдут. Прогресс сохраняется в этом браузере.</p>
+    <label>Дисциплина</label>
+    <div class="disc-list" id="g-disc"></div>
+    <label for="g-student">Студент</label>
+    <select id="g-student" disabled><option value="">— сначала выберите дисциплину —</option></select>
+    <button class="btn" id="g-start">Начать практикум</button>
+    <div class="gate-err" id="g-err"></div>
+  </div>
+</div>
+
+<div id="app" class="hidden">
+  <header>
+    <div><div class="t" id="h-title">Пересдача DevSecOps</div><div class="who" id="who"></div></div>
+    <div class="prog"><div class="bar"><div class="fill" id="pfill"></div></div><div class="lbl" id="plbl"></div></div>
+    <button class="btn" id="btn-report">Отчёт о прогрессе</button>
+    <button class="btn" id="btn-exit">Сменить студента</button>
+  </header>
+  <div class="wrap">
+    <nav id="nav"></nav>
+    <main id="main"></main>
+  </div>
+</div>
+
+<div id="modal" class="modal-bg hidden">
+  <div class="modal">
+    <h3>Отчёт о прогрессе</h3>
+    <pre class="report" id="modal-report"></pre>
+    <div class="row"><button class="btn" id="modal-copy">Скопировать</button><button class="btn ghost" id="modal-close">Закрыть</button><span class="fb" id="modal-fb"></span></div>
+  </div>
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/roster.js"></script>
+<script src="js/engine.js"></script>
+</body>
+</html>
